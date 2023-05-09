@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     private float verticalInput;
     private float currentCooldown = 0.0f;
 
+    Vector2 movement;
+
     public GameObject projectile;
 
     // Update is called once per frame
@@ -29,6 +31,7 @@ public class PlayerController : MonoBehaviour
         // And move our character in the world. The bounding is automatically handled by KeepActorInBounds
         transform.Translate(Vector2.right * speed * horizontalInput * Time.deltaTime);
         transform.Translate(Vector2.up * speed * verticalInput * Time.deltaTime);
+
 
         // Spawn a projectile if we press the space bar and our cooldown is done
         if (Input.GetKeyDown(KeyCode.Space) && currentCooldown <= 0)

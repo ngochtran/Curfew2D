@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 601999567186944179}
   - component: {fileID: 601999567186944188}
   - component: {fileID: 601999567186944178}
+  - component: {fileID: 3473013978657924095}
   m_Layer: 0
   m_Name: Child
   m_TagString: Untagged
@@ -101,3 +102,24 @@ MonoBehaviour:
   stopDistance: 1
   health: 15
   invulnerableDuration: 1
+  animator: {fileID: 3473013978657924095}
+--- !u!95 &3473013978657924095
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601999567186944189}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8ea6ef28007528341b5315d3f50963ba, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
