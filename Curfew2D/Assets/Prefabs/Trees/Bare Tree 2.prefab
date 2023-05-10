@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3031013922650765916}
   - component: {fileID: 4086305609102201856}
   - component: {fileID: 8965603331753728115}
+  - component: {fileID: 7645813175281638841}
   m_Layer: 0
   m_Name: Bare Tree 2
   m_TagString: Untagged
@@ -98,6 +99,27 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.024009943, y: -0.04401827}
-  m_Size: {x: 0.3037119, y: 0.7076721}
+  m_Offset: {x: 0.040016532, y: -0.24599841}
+  m_Size: {x: 0.24768853, y: 0.2636953}
   m_Direction: 0
+--- !u!50 &7645813175281638841
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4089553241685345447}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

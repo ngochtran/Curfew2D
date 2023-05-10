@@ -17,6 +17,7 @@ public class ChildController : MonoBehaviour
     public int health = 15;
     public float invulnerableDuration = 1.0f;
     private float currentInvulnerability = 0.0f;
+    public Rigidbody2D rb;
 
     // Animation Variables
     public Animator animator;
@@ -42,8 +43,7 @@ public class ChildController : MonoBehaviour
         // Move the child towards the player unless they're within stop distance
         Vector3 playerPos = GameObject.Find("Player").GetComponent<Transform>().position;
         float distance = Vector2.Distance(transform.position, playerPos);
-        float displacementX = playerPos.x - transform.position.x;
-        float displacementY = playerPos.y - transform.position.y;
+        //rb.velocity = new Vector2(transform.position.x, transform.position.y);
 
         if (distance > stopDistance)
         {
