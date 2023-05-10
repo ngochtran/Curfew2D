@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1145328541167665537}
   - component: {fileID: 3402981196407163841}
   - component: {fileID: 1567850151732220135}
+  - component: {fileID: 1626065613}
   m_Layer: 0
   m_Name: Child
   m_TagString: Child
@@ -104,7 +105,6 @@ MonoBehaviour:
   childSpeed: 5
   stopDistance: 1
   health: 15
-  invulnerableDuration: 1
   rb: {fileID: 3402981196407163841}
   animator: {fileID: 3473013978657924095}
 --- !u!95 &3473013978657924095
@@ -187,3 +187,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+--- !u!114 &1626065613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601999567186944189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b437c6fc7c22343b2abbf25befa7fa15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0

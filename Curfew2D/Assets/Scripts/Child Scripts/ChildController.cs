@@ -6,18 +6,13 @@ using UnityEngine.UIElements;
 
 public class ChildController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
     // Child Variables
     public float childSpeed = 5.0f;
     public float stopDistance = 1.0f;
     public int health = 15;
-    public float invulnerableDuration = 1.0f;
-    private float currentInvulnerability = 0.0f;
     public Rigidbody2D rb;
+
+    private ChildStateController stateSwitcher;
 
     // Animation Variables
     public Animator animator;
@@ -26,20 +21,28 @@ public class ChildController : MonoBehaviour
     private float moving;
 
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        stateSwitcher = GetComponent<ChildStateController>();
+    }
     // Update is called once per frame
     void Update()
     {
-        MoveChild();
-
-        // Also decrease the invulnerability period
-        if (currentInvulnerability > 0)
+        ChildStateController.State currentState = stateSwitcher.currentState;
+        if (currentState == ChildStateController.State.Follow)
         {
-            currentInvulnerability -= Time.deltaTime;
+            MoveChild();
+        }
+        else if (currentState == ChildStateController.State.InTrap)
+        {
+            InTrap();
         }
     }
 
     void MoveChild()
     {
+
         // Move the child towards the player unless they're within stop distance
         Vector3 playerPos = GameObject.Find("Player").GetComponent<Transform>().position;
         float distance = Vector2.Distance(transform.position, playerPos);
@@ -71,22 +74,8 @@ public class ChildController : MonoBehaviour
         }
     }
 
-    void TakeDamage(int damage)
+    void InTrap()
     {
-        // Only take damage if we don't have invincibility frames
-        if (currentInvulnerability <= 0)
-        {
-            currentInvulnerability = invulnerableDuration;
-            health -= damage;
-            if (health < 1)
-            {
-                Die();
-            }
-        }
-    }
-
-    void Die()
-    {
-
+        
     }
 }
