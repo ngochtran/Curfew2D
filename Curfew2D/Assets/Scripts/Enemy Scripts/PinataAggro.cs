@@ -15,6 +15,8 @@ public class PinataAggro : MonoBehaviour
     private float dashDistance = 3.0f;
     [SerializeField]
     private float dashDelay = 1.0f;
+    [SerializeField]
+    private int damage = 10;
 
     private EnemyStateSwitcher stateSwitcher;
     private float curDashDelay;
@@ -29,7 +31,6 @@ public class PinataAggro : MonoBehaviour
         // Find the dash time
         dashTime = dashDistance / dashSpeed;
         curDashDelay = 1.0f;
-        Debug.Log(dashTime);
     }
 
     // Update is called once per frame
@@ -104,6 +105,14 @@ public class PinataAggro : MonoBehaviour
         else
         {
             transform.Translate(direction * dashSpeed * Time.deltaTime);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Child"))
+        {
+            collision.GetComponent<ChildHealth>().TakeDamage(damage);
         }
     }
 }
