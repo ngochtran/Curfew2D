@@ -1,0 +1,489 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1349183572580324502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1967550056602505396}
+  - component: {fileID: 8083651065165258703}
+  m_Layer: 0
+  m_Name: Mushroom Spawn Point (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1967550056602505396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349183572580324502}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.59, y: 0.81, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5566850017550417089}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8083651065165258703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349183572580324502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78663100addcada42994e72d41c3fdf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 4591304942002886922, guid: 001f882b5fcd9db47b26941236089abe, type: 3}
+  - {fileID: 4526974580631696021, guid: e3bb8d63c4ac2a4439a16f2430371cdc, type: 3}
+  - {fileID: 4553914399152370444, guid: 6df45c1915bb00f4690bf5af3b8fb1d9, type: 3}
+  - {fileID: 1075809010057432379, guid: 7272f4a289f101d4e8dd52a49f4f2355, type: 3}
+  - {fileID: 1031225247980056087, guid: 2f00f79555b9e6b40861f8464cd12836, type: 3}
+  - {fileID: 661159311946744021, guid: 6a0a385db24ea6344b027a6cce8f4f35, type: 3}
+  - {fileID: 8138402428663583601, guid: 72dbc9112e090274b8d683aa9aa67dfa, type: 3}
+  - {fileID: 8492202703797771841, guid: 88910e34fde936c4c9918bb5bb22aec4, type: 3}
+  - {fileID: 2823172207813105430, guid: b1637704eee1ddc46ae91f6c6677b97d, type: 3}
+  - {fileID: 401879457626488902, guid: 0b537c1fd5ee1904e9c3ede0087a994b, type: 3}
+  - {fileID: 274425006715037143, guid: c8d2eefb5a1a10a4fb007ad2d299e9b8, type: 3}
+  - {fileID: 7428965541057153431, guid: 3fa0f4d0e71f2a54db30183edcfcb503, type: 3}
+  - {fileID: 7521660512746867271, guid: eb72d02289adc4540803a3ba6e4c8f8f, type: 3}
+  - {fileID: 5318479179301625181, guid: 0e36ef934f89cef4c9ca5dfd53b7f3c0, type: 3}
+  - {fileID: 1368987637113744202, guid: b4e351fef38bd1b4082f8aed124b84c3, type: 3}
+  - {fileID: 6167349910503980062, guid: 67540bf9f05371148b1397fa4eea5134, type: 3}
+  - {fileID: 914576515428758017, guid: 09cb86ba74e7fdc4590b6561e5f896e5, type: 3}
+  - {fileID: 203120200846844383, guid: 2942b937185ce18488c025f748448cf8, type: 3}
+--- !u!1 &4121475757584540767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2288274059085948170}
+  - component: {fileID: 1420638155835560637}
+  m_Layer: 0
+  m_Name: Mushroom Spawn Point (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2288274059085948170
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4121475757584540767}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.62, y: 0.81, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5566850017550417089}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1420638155835560637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4121475757584540767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78663100addcada42994e72d41c3fdf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 4591304942002886922, guid: 001f882b5fcd9db47b26941236089abe, type: 3}
+  - {fileID: 4526974580631696021, guid: e3bb8d63c4ac2a4439a16f2430371cdc, type: 3}
+  - {fileID: 4553914399152370444, guid: 6df45c1915bb00f4690bf5af3b8fb1d9, type: 3}
+  - {fileID: 1075809010057432379, guid: 7272f4a289f101d4e8dd52a49f4f2355, type: 3}
+  - {fileID: 1031225247980056087, guid: 2f00f79555b9e6b40861f8464cd12836, type: 3}
+  - {fileID: 661159311946744021, guid: 6a0a385db24ea6344b027a6cce8f4f35, type: 3}
+  - {fileID: 8138402428663583601, guid: 72dbc9112e090274b8d683aa9aa67dfa, type: 3}
+  - {fileID: 8492202703797771841, guid: 88910e34fde936c4c9918bb5bb22aec4, type: 3}
+  - {fileID: 2823172207813105430, guid: b1637704eee1ddc46ae91f6c6677b97d, type: 3}
+  - {fileID: 401879457626488902, guid: 0b537c1fd5ee1904e9c3ede0087a994b, type: 3}
+  - {fileID: 274425006715037143, guid: c8d2eefb5a1a10a4fb007ad2d299e9b8, type: 3}
+  - {fileID: 7428965541057153431, guid: 3fa0f4d0e71f2a54db30183edcfcb503, type: 3}
+  - {fileID: 7521660512746867271, guid: eb72d02289adc4540803a3ba6e4c8f8f, type: 3}
+  - {fileID: 5318479179301625181, guid: 0e36ef934f89cef4c9ca5dfd53b7f3c0, type: 3}
+  - {fileID: 1368987637113744202, guid: b4e351fef38bd1b4082f8aed124b84c3, type: 3}
+  - {fileID: 6167349910503980062, guid: 67540bf9f05371148b1397fa4eea5134, type: 3}
+  - {fileID: 914576515428758017, guid: 09cb86ba74e7fdc4590b6561e5f896e5, type: 3}
+  - {fileID: 203120200846844383, guid: 2942b937185ce18488c025f748448cf8, type: 3}
+--- !u!1 &5566850016880752819
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5566850016880752818}
+  - component: {fileID: 5566850016880752817}
+  m_Layer: 0
+  m_Name: Mushroom Spawn Point (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5566850016880752818
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566850016880752819}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.02, y: -0.03, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5566850017550417089}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5566850016880752817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566850016880752819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78663100addcada42994e72d41c3fdf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 4591304942002886922, guid: 001f882b5fcd9db47b26941236089abe, type: 3}
+  - {fileID: 4526974580631696021, guid: e3bb8d63c4ac2a4439a16f2430371cdc, type: 3}
+  - {fileID: 4553914399152370444, guid: 6df45c1915bb00f4690bf5af3b8fb1d9, type: 3}
+  - {fileID: 1075809010057432379, guid: 7272f4a289f101d4e8dd52a49f4f2355, type: 3}
+  - {fileID: 1031225247980056087, guid: 2f00f79555b9e6b40861f8464cd12836, type: 3}
+  - {fileID: 661159311946744021, guid: 6a0a385db24ea6344b027a6cce8f4f35, type: 3}
+  - {fileID: 8138402428663583601, guid: 72dbc9112e090274b8d683aa9aa67dfa, type: 3}
+  - {fileID: 8492202703797771841, guid: 88910e34fde936c4c9918bb5bb22aec4, type: 3}
+  - {fileID: 2823172207813105430, guid: b1637704eee1ddc46ae91f6c6677b97d, type: 3}
+  - {fileID: 401879457626488902, guid: 0b537c1fd5ee1904e9c3ede0087a994b, type: 3}
+  - {fileID: 274425006715037143, guid: c8d2eefb5a1a10a4fb007ad2d299e9b8, type: 3}
+  - {fileID: 7428965541057153431, guid: 3fa0f4d0e71f2a54db30183edcfcb503, type: 3}
+  - {fileID: 7521660512746867271, guid: eb72d02289adc4540803a3ba6e4c8f8f, type: 3}
+  - {fileID: 5318479179301625181, guid: 0e36ef934f89cef4c9ca5dfd53b7f3c0, type: 3}
+  - {fileID: 1368987637113744202, guid: b4e351fef38bd1b4082f8aed124b84c3, type: 3}
+  - {fileID: 6167349910503980062, guid: 67540bf9f05371148b1397fa4eea5134, type: 3}
+  - {fileID: 914576515428758017, guid: 09cb86ba74e7fdc4590b6561e5f896e5, type: 3}
+  - {fileID: 203120200846844383, guid: 2942b937185ce18488c025f748448cf8, type: 3}
+--- !u!1 &5566850017050014281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5566850017050014280}
+  - component: {fileID: 5566850017050014279}
+  m_Layer: 0
+  m_Name: Tree Spawn Point (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5566850017050014280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566850017050014281}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.6, y: 1.56, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5566850017550417089}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5566850017050014279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566850017050014281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78663100addcada42994e72d41c3fdf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 7446964100078312850, guid: eb8c350c7b6771a439bb37b3f2bcc451, type: 3}
+  - {fileID: 4089553241685345447, guid: 0429b583dda49b349b1ef16ea0dae55a, type: 3}
+  - {fileID: 352523259578116204, guid: b9c621c4daa965344ad3774316700a42, type: 3}
+  - {fileID: 3583454560511236512, guid: e22f8a3a11596a146b2e9ec217632e25, type: 3}
+--- !u!1 &5566850017252339911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5566850017252339910}
+  - component: {fileID: 5566850017252339909}
+  m_Layer: 0
+  m_Name: Tree Spawn Point (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5566850017252339910
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566850017252339911}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.02, y: -2.15, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5566850017550417089}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5566850017252339909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566850017252339911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78663100addcada42994e72d41c3fdf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 7446964100078312850, guid: eb8c350c7b6771a439bb37b3f2bcc451, type: 3}
+  - {fileID: 4089553241685345447, guid: 0429b583dda49b349b1ef16ea0dae55a, type: 3}
+  - {fileID: 352523259578116204, guid: b9c621c4daa965344ad3774316700a42, type: 3}
+  - {fileID: 3583454560511236512, guid: e22f8a3a11596a146b2e9ec217632e25, type: 3}
+--- !u!1 &5566850017550417090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5566850017550417089}
+  m_Layer: 0
+  m_Name: Tree + Mushroom Template 03
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5566850017550417089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566850017550417090}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5566850017988644105}
+  - {fileID: 5566850016880752818}
+  - {fileID: 5566850017986505738}
+  - {fileID: 5566850017050014280}
+  - {fileID: 5566850017252339910}
+  - {fileID: 5566850017718912742}
+  - {fileID: 1967550056602505396}
+  - {fileID: 2288274059085948170}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5566850017718912743
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5566850017718912742}
+  - component: {fileID: 5566850017718912741}
+  m_Layer: 0
+  m_Name: Tree Spawn Point (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5566850017718912742
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566850017718912743}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.83, y: 3.04, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5566850017550417089}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5566850017718912741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566850017718912743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78663100addcada42994e72d41c3fdf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 7446964100078312850, guid: eb8c350c7b6771a439bb37b3f2bcc451, type: 3}
+  - {fileID: 4089553241685345447, guid: 0429b583dda49b349b1ef16ea0dae55a, type: 3}
+  - {fileID: 352523259578116204, guid: b9c621c4daa965344ad3774316700a42, type: 3}
+  - {fileID: 3583454560511236512, guid: e22f8a3a11596a146b2e9ec217632e25, type: 3}
+--- !u!1 &5566850017986505739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5566850017986505738}
+  - component: {fileID: 5566850017986505737}
+  m_Layer: 0
+  m_Name: Tree Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5566850017986505738
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566850017986505739}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.5399995, y: 2.63, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5566850017550417089}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5566850017986505737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566850017986505739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78663100addcada42994e72d41c3fdf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 7446964100078312850, guid: eb8c350c7b6771a439bb37b3f2bcc451, type: 3}
+  - {fileID: 4089553241685345447, guid: 0429b583dda49b349b1ef16ea0dae55a, type: 3}
+  - {fileID: 352523259578116204, guid: b9c621c4daa965344ad3774316700a42, type: 3}
+  - {fileID: 3583454560511236512, guid: e22f8a3a11596a146b2e9ec217632e25, type: 3}
+--- !u!1 &5566850017988644106
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5566850017988644105}
+  - component: {fileID: 5566850017988644104}
+  m_Layer: 0
+  m_Name: Mushroom Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5566850017988644105
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566850017988644106}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.92, y: 0.26, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5566850017550417089}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5566850017988644104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566850017988644106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78663100addcada42994e72d41c3fdf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 4591304942002886922, guid: 001f882b5fcd9db47b26941236089abe, type: 3}
+  - {fileID: 4526974580631696021, guid: e3bb8d63c4ac2a4439a16f2430371cdc, type: 3}
+  - {fileID: 4553914399152370444, guid: 6df45c1915bb00f4690bf5af3b8fb1d9, type: 3}
+  - {fileID: 1075809010057432379, guid: 7272f4a289f101d4e8dd52a49f4f2355, type: 3}
+  - {fileID: 1031225247980056087, guid: 2f00f79555b9e6b40861f8464cd12836, type: 3}
+  - {fileID: 661159311946744021, guid: 6a0a385db24ea6344b027a6cce8f4f35, type: 3}
+  - {fileID: 8138402428663583601, guid: 72dbc9112e090274b8d683aa9aa67dfa, type: 3}
+  - {fileID: 8492202703797771841, guid: 88910e34fde936c4c9918bb5bb22aec4, type: 3}
+  - {fileID: 2823172207813105430, guid: b1637704eee1ddc46ae91f6c6677b97d, type: 3}
+  - {fileID: 401879457626488902, guid: 0b537c1fd5ee1904e9c3ede0087a994b, type: 3}
+  - {fileID: 274425006715037143, guid: c8d2eefb5a1a10a4fb007ad2d299e9b8, type: 3}
+  - {fileID: 7428965541057153431, guid: 3fa0f4d0e71f2a54db30183edcfcb503, type: 3}
+  - {fileID: 7521660512746867271, guid: eb72d02289adc4540803a3ba6e4c8f8f, type: 3}
+  - {fileID: 5318479179301625181, guid: 0e36ef934f89cef4c9ca5dfd53b7f3c0, type: 3}
+  - {fileID: 1368987637113744202, guid: b4e351fef38bd1b4082f8aed124b84c3, type: 3}
+  - {fileID: 6167349910503980062, guid: 67540bf9f05371148b1397fa4eea5134, type: 3}
+  - {fileID: 914576515428758017, guid: 09cb86ba74e7fdc4590b6561e5f896e5, type: 3}
+  - {fileID: 203120200846844383, guid: 2942b937185ce18488c025f748448cf8, type: 3}
