@@ -47,6 +47,6 @@ public class PlayerController : MonoBehaviour
     void SpawnProjectile()
     {
         currentCooldown = attackCooldown;
-        //Instantiate(projectile, transform.position, transform.rotation);
+        Instantiate(projectile, transform.position, transform.rotation);
     }
 }

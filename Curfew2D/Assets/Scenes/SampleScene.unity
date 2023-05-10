@@ -340,26 +340,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1361231617 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7593456168627304708, guid: 634772c2bc5ac944592be28879ba5e26, type: 3}
-  m_PrefabInstance: {fileID: 7593456167840761349}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1361231622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1361231617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa60c6dec5a599542a83b2006df5974f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 6
-  health: 1
-  damage: 1
 --- !u!1 &1819930582
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,6 +473,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3256065074072440577, guid: 727a5cfb9a996874ea1ef132e30eadf2, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 4963517476950527027, guid: c81cbd78b920a4e189a62eb4059e844c, type: 3}
     - target: {fileID: 3256065074072440578, guid: 727a5cfb9a996874ea1ef132e30eadf2, type: 3}
       propertyPath: m_Name
       value: Player
@@ -550,14 +534,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4506849886583471980, guid: 634772c2bc5ac944592be28879ba5e26, type: 3}
-      propertyPath: maxIdleTime
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4506849886583471980, guid: 634772c2bc5ac944592be28879ba5e26, type: 3}
-      propertyPath: maxWalkingTime
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 7593456168627304708, guid: 634772c2bc5ac944592be28879ba5e26, type: 3}
       propertyPath: m_Name
       value: Pinata

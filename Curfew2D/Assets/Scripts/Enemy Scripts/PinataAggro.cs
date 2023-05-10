@@ -6,8 +6,6 @@ public class PinataAggro : MonoBehaviour
 {
 
     public float speed = 6.0f;
-    public int health = 1;
-    public int damage = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +16,6 @@ public class PinataAggro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Destroy if we're dead
-        if (health < 1)
-        {
-            Destroy(gameObject);
-        }
 
         // Get the current state
         EnemyStateSwitcher.State enemyState = GetComponent<EnemyStateSwitcher>().currentState;
@@ -36,10 +29,5 @@ public class PinataAggro : MonoBehaviour
             // Move towards the child
             transform.Translate(direction * speed * Time.deltaTime);
         }
-    }
-
-    void TakeDamage(int damage)
-    {
-        health -= damage;
     }
 }
