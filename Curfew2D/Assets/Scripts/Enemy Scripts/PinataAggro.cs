@@ -17,7 +17,7 @@ public class PinataAggro : MonoBehaviour
     private float dashDelay = 1.0f;
 
     private EnemyStateSwitcher stateSwitcher;
-    private float curDelay;
+    private float curDashDelay;
     private float dashTime;
     private float curDashDuration = 0.0f;
     private Vector2 direction;
@@ -28,7 +28,8 @@ public class PinataAggro : MonoBehaviour
         stateSwitcher = GetComponent<EnemyStateSwitcher>();
         // Find the dash time
         dashTime = dashDistance / dashSpeed;
-        curDelay = 1.0f;
+        curDashDelay = 1.0f;
+        Debug.Log(dashTime);
     }
 
     // Update is called once per frame
@@ -73,13 +74,13 @@ public class PinataAggro : MonoBehaviour
     // Decreases the current time and switches to our next mode when we're done.
     void DashWarmup()
     {
-        curDelay -= Time.deltaTime;
-        if (curDelay <= 0)
+        curDashDelay -= Time.deltaTime;
+        if (curDashDelay <= 0)
         {
             // Switch modes
             stateSwitcher.currentState = EnemyStateSwitcher.State.Dashing;
             // And reset our cooldown
-            curDelay = dashDelay;
+            curDashDelay = dashDelay;
             // And finally set the correct direction
             Vector2 childPos = GameObject.Find("Child").GetComponent<Transform>().position;
             Vector2 curPos = new Vector2(transform.position.x, transform.position.y);
@@ -91,14 +92,13 @@ public class PinataAggro : MonoBehaviour
     // Move the llama forward to the target location at our given speed
     void Dash()
     {
-        // Increment our duration
-        curDashDuration += Time.deltaTime;
-        // If it's greater than our target duration, go back to aggro
-        if (curDashDuration > dashTime)
+        // Decrease our time
+        curDashDuration -= Time.deltaTime;
+        // Go back to aggro if we've used up all of our time
+        if (curDashDuration <= 0)
         {
             stateSwitcher.currentState = EnemyStateSwitcher.State.Aggro;
-            // And also reset the duration
-            curDashDuration = 0.0f;
+            curDashDuration = dashTime;
         }
         // Otherwise, dash!
         else
