@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
-  aggroRange: 2
+  aggroRange: 3
 --- !u!61 &1361231628
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -157,6 +157,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+  dashSpeed: 8
+  dashDistanceTrigger: 3
+  dashDistance: 4
+  dashDelay: 1
 --- !u!114 &1361231627
 MonoBehaviour:
   m_ObjectHideFlags: 0

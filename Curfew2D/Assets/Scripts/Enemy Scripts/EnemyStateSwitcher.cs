@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyStateSwitcher : MonoBehaviour
 {
 
-    public enum State { Idle, Aggro };
+    public enum State { Idle, Aggro, DashWarmup, Dashing };
     public State currentState;
     public float aggroRange = 2.0f;
 
@@ -18,9 +18,9 @@ public class EnemyStateSwitcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Set the state to aggro if we enter the aggro range
+        // Set the state to aggro if we enter the aggro range and we're in idle
         Vector2 childPos = GameObject.Find("Child").GetComponent<Transform>().position;
-        if (Vector2.Distance(transform.position, childPos) < aggroRange)
+        if (Vector2.Distance(transform.position, childPos) < aggroRange && currentState == State.Idle)
         {
             currentState = State.Aggro;
         }

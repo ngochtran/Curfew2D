@@ -436,34 +436,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 601999567186944188, guid: dad52ca227158aa438ef510adf99b2c1, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 817567086, guid: 7a880f8931b35ef419683a0e39d3267d, type: 3}
-    - target: {fileID: 601999567186944188, guid: dad52ca227158aa438ef510adf99b2c1, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 601999567186944188, guid: dad52ca227158aa438ef510adf99b2c1, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 601999567186944188, guid: dad52ca227158aa438ef510adf99b2c1, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 601999567186944188, guid: dad52ca227158aa438ef510adf99b2c1, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 601999567186944189, guid: dad52ca227158aa438ef510adf99b2c1, type: 3}
       propertyPath: m_Name
       value: Child
       objectReference: {fileID: 0}
-    - target: {fileID: 3473013978657924095, guid: dad52ca227158aa438ef510adf99b2c1, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 8ea6ef28007528341b5315d3f50963ba, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dad52ca227158aa438ef510adf99b2c1, type: 3}
 --- !u!1001 &3256065073760085031
@@ -473,10 +449,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3256065074072440577, guid: 727a5cfb9a996874ea1ef132e30eadf2, type: 3}
-      propertyPath: projectile
-      value: 
-      objectReference: {fileID: 4963517476950527027, guid: c81cbd78b920a4e189a62eb4059e844c, type: 3}
     - target: {fileID: 3256065074072440578, guid: 727a5cfb9a996874ea1ef132e30eadf2, type: 3}
       propertyPath: m_Name
       value: Player
@@ -544,11 +516,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7593456168627304710, guid: 634772c2bc5ac944592be28879ba5e26, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.55692446
+      value: 4.22
       objectReference: {fileID: 0}
     - target: {fileID: 7593456168627304710, guid: 634772c2bc5ac944592be28879ba5e26, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1105313
+      value: 0.76
       objectReference: {fileID: 0}
     - target: {fileID: 7593456168627304710, guid: 634772c2bc5ac944592be28879ba5e26, type: 3}
       propertyPath: m_LocalPosition.z
