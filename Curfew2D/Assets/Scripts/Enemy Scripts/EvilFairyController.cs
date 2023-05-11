@@ -16,6 +16,8 @@ public class EvilFairyController : MonoBehaviour
     private float curSpellDuration;
     private GameObject nearestTrap;
     private Vector2 direction;
+    private bool pastTrap = false;
+    private float gonePastTrapDistance = 0.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -72,6 +74,26 @@ public class EvilFairyController : MonoBehaviour
 
     void Lure()
     {
-        transform.Translate(direction * speed * Time.deltaTime);
+        if (!pastTrap)
+        {
+            transform.Translate(direction * speed * Time.deltaTime);
+        }
+        else if (gonePastTrapDistance <= goPastTrapDistance)
+        {
+            gonePastTrapDistance += speed * Time.deltaTime;
+            transform.Translate(direction * speed * Time.deltaTime);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // We're past the trap if we hit it and we're in luring mode
+        if (collision.CompareTag("Trap"))
+        {
+            if (stateSwitcher.currentState == EnemyStateSwitcher.State.Luring)
+            {
+                pastTrap = true;
+            }
+        }
     }
 }
