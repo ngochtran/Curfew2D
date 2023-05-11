@@ -13,6 +13,7 @@ public class ChildController : MonoBehaviour
     public Rigidbody2D rb;
 
     private ChildStateController stateSwitcher;
+    private GameObject fairyLeader;
 
     // Animation Variables
     public Animator animator;
@@ -25,6 +26,7 @@ public class ChildController : MonoBehaviour
     void Start()
     {
         stateSwitcher = GetComponent<ChildStateController>();
+        fairyLeader = GameObject.Find("Player");
     }
     // Update is called once per frame
     void Update()
@@ -38,19 +40,22 @@ public class ChildController : MonoBehaviour
         {
             InTrap();
         }
+        else if (currentState == ChildStateController.State.FollowEvil)
+        {
+            MoveChild();
+        }
     }
 
     void MoveChild()
     {
-
-        // Move the child towards the player unless they're within stop distance
-        Vector3 playerPos = GameObject.Find("Player").GetComponent<Transform>().position;
-        float distance = Vector2.Distance(transform.position, playerPos);
+        // Move the child towards the leader unless they're within stop distance
+        Vector3 leaderPos = fairyLeader.GetComponent<Transform>().position;
+        float distance = Vector2.Distance(transform.position, leaderPos);
         //rb.velocity = new Vector2(transform.position.x, transform.position.y);
 
         if (distance > stopDistance)
         {
-            Vector2 direction = (playerPos - transform.position).normalized;
+            Vector2 direction = (leaderPos - transform.position).normalized;
             transform.Translate(direction * childSpeed * Time.deltaTime);
             moving = 1;
 
@@ -77,5 +82,10 @@ public class ChildController : MonoBehaviour
     void InTrap()
     {
         
+    }
+
+    public void SetLeader(GameObject leader)
+    {
+        fairyLeader = leader;
     }
 }

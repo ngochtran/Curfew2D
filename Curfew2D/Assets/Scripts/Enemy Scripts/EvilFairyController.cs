@@ -53,6 +53,8 @@ public class EvilFairyController : MonoBehaviour
             stateSwitcher.currentState = EnemyStateSwitcher.State.Luring;
             // Also find the nearest trap
             FindNearestTrap();
+            // And also become the leader of the child!
+            GameObject.Find("Child").GetComponent<ChildController>().SetLeader(gameObject);
         }
     }
 
