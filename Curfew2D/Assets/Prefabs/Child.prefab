@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3402981196407163841}
   - component: {fileID: 1567850151732220135}
   - component: {fileID: 1626065613}
+  - component: {fileID: 4246465139671338189}
   m_Layer: 0
   m_Name: Child
   m_TagString: Child
@@ -200,3 +201,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
+--- !u!70 &4246465139671338189
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601999567186944189}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.012340665, y: -0.10613096}
+  m_Size: {x: 0.37308764, y: 0.41257834}
+  m_Direction: 0
