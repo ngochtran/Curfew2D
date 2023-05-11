@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyStateSwitcher : MonoBehaviour
 {
 
-    public enum State { Idle, Aggro, DashWarmup, Dashing };
+    public enum State { Idle, Aggro, DashWarmup, Dashing, SpellWarmup, Luring };
     public State currentState;
     public float aggroRange = 2.0f;
 
