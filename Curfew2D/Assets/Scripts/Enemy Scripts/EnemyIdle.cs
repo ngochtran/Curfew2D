@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class EnemyIdle : MonoBehaviour
 {
-    public float speed = 6.0f;
-    public float maxIdleTime = 4.0f;
-    public float maxWalkingTime = 1.0f;
+    [SerializeField]
+    private float speed = 6.0f;
+    [SerializeField]
+    private float maxIdleTime = 4.0f;
+    [SerializeField]
+    private float minIdleTime = 1.0f;
+    [SerializeField]
+    private float maxWalkingTime = 1.0f;
+    [SerializeField]
+    private float minWalkingTime = 0.5f;
 
     private float idleTime = 0.0f;
     private float walkingTime = 0.0f;
     private Vector2 direction;
+    public int idleCycles = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +26,6 @@ public class EnemyIdle : MonoBehaviour
         ResetIdleTime();
         ResetWalkingTime();
         ResetDirection();
-
     }
 
     // Update is called once per frame
@@ -44,22 +51,29 @@ public class EnemyIdle : MonoBehaviour
                 ResetIdleTime();
                 ResetWalkingTime();
                 ResetDirection();
+                // Also increment our idle cycles
+                idleCycles++;
             }
         }
     }
 
     void ResetIdleTime()
     {
-        idleTime = Random.Range(0, maxIdleTime);
+        idleTime = Random.Range(minIdleTime, maxIdleTime);
     }
 
     void ResetWalkingTime()
     {
-        walkingTime = Random.Range(0, maxWalkingTime);
+        walkingTime = Random.Range(minWalkingTime, maxWalkingTime);
     }
 
     void ResetDirection()
     {
         direction = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
+    }
+
+    public void ResetIdleCycles()
+    {
+        idleCycles = 0;
     }
 }

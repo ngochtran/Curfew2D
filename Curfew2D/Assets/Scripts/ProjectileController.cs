@@ -17,7 +17,6 @@ public class ProjectileController : MonoBehaviour
         Vector2 mouseLocation = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 curLocation = transform.position;
         direction = (mouseLocation - curLocation).normalized;
-        // Also make it unaffected by physics
     }
 
     // Update is called once per frame
