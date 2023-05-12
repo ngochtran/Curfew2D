@@ -6,12 +6,14 @@ public class ChildHealth : MonoBehaviour
 {
 
     [SerializeField]
-    private int health = 10;
+    private int maxHealth = 10;
+
+    private int health;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        health = maxHealth;
     }
 
     // Update is called once per frame
@@ -32,5 +34,14 @@ public class ChildHealth : MonoBehaviour
     void Die()
     {
         Debug.Log("Child Died");
+    }
+
+    public void Heal(int amount)
+    {
+        health += amount;
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
     }
 }

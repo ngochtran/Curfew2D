@@ -5,11 +5,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     public float speed = 10.0f;
     public float attackCooldown = 1.0f;
 
@@ -17,9 +12,15 @@ public class PlayerController : MonoBehaviour
     private float verticalInput;
     private float currentCooldown = 0.0f;
 
+    private Inventory inventory;
+
     Vector2 movement;
 
     public GameObject projectile;
+    void Start()
+    {
+        inventory = GetComponent<Inventory>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -48,5 +49,23 @@ public class PlayerController : MonoBehaviour
     {
         currentCooldown = attackCooldown;
         Instantiate(projectile, transform.position, transform.rotation);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Item"))
+        {
+            // See if we have a rope or a candy and add it to our inventory
+            if (collision.GetComponent<RopeController>() != null)
+            {
+                inventory.AddItem("Rope");
+                Destroy(collision.gameObject);
+            }
+            else if (collision.GetComponent<CandyController>() != null)
+            {
+                inventory.AddItem("Candy");
+                Destroy(collision.gameObject);
+            }
+        }
     }
 }
