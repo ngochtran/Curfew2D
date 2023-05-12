@@ -11,8 +11,15 @@ public class ChildController : MonoBehaviour
     public float stopDistance = 1.0f;
     public int health = 15;
     public Rigidbody2D rb;
+    private float trapImmunity = 0.5f;
+    [SerializeField]
+    // Yep we're defining that here, deal with it
+    private int trapDamage = 1;
+
+    private float curTrapImmunity = 0.0f;
 
     private ChildStateController stateSwitcher;
+    private ChildHealth childHealth;
     private GameObject fairyLeader;
 
     // Animation Variables
@@ -26,6 +33,7 @@ public class ChildController : MonoBehaviour
     void Start()
     {
         stateSwitcher = GetComponent<ChildStateController>();
+        childHealth = GetComponent<ChildHealth>();
         fairyLeader = GameObject.Find("Player");
     }
     // Update is called once per frame
@@ -81,7 +89,12 @@ public class ChildController : MonoBehaviour
 
     void InTrap()
     {
-        
+        curTrapImmunity -= Time.deltaTime;
+        if (curTrapImmunity < 0)
+        {
+            childHealth.TakeDamage(trapDamage);
+            curTrapImmunity = trapImmunity;
+        }
     }
 
     public void SetLeader(GameObject leader)
