@@ -31,5 +31,12 @@ public class EnemyHealth : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
+        // If we're luring the child then we need to set a new leader before expiring
+        if (GetComponent<EnemyStateSwitcher>().currentState == EnemyStateSwitcher.State.Luring)
+        {
+            // Set the new leader to the player
+            GameObject player = GameObject.Find("Player");
+            GameObject.Find("Child").GetComponent<ChildController>().SetLeader(player);
+        }
     }
 }
