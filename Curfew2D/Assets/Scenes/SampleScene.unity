@@ -166,7 +166,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 612, y: -430}
+  m_AnchoredPosition: {x: 621, y: -445}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &50583049
@@ -2039,7 +2039,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 800, y: -370}
+  m_AnchoredPosition: {x: 809, y: -385}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1207497626
@@ -2596,7 +2596,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 477, y: -430}
+  m_AnchoredPosition: {x: 486, y: -445}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1524016429
@@ -3305,6 +3305,14 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 957222259, guid: 727a5cfb9a996874ea1ef132e30eadf2, type: 3}
+      propertyPath: ropeCount
+      value: 
+      objectReference: {fileID: 483767579}
+    - target: {fileID: 957222259, guid: 727a5cfb9a996874ea1ef132e30eadf2, type: 3}
+      propertyPath: candyCount
+      value: 
+      objectReference: {fileID: 254243147}
     - target: {fileID: 3256065074072440576, guid: 727a5cfb9a996874ea1ef132e30eadf2, type: 3}
       propertyPath: m_Sprite
       value: 

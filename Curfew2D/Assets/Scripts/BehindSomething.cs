@@ -24,7 +24,7 @@ public class BehindSomething : MonoBehaviour
             SpriteRenderer childSprite = GameObject.Find("Child").GetComponent<SpriteRenderer>();
             childSprite.color = new Color(1, 1, 1, 0.5f);
         }
-   
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)

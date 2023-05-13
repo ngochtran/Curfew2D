@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
 
     private Dictionary<string, int> items;
+    public TMP_Text candyCount;
+    public TMP_Text ropeCount;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +29,14 @@ public class Inventory : MonoBehaviour
     {
         // We can do some dictionary type data structure here
         items[type] += 1;
+        if (type == "Candy")
+        {
+            candyCount.text = items[type].ToString();
+        }
+        if (type == "Rope")
+        {
+            ropeCount.text = items[type].ToString();
+        }
     }
 
     public bool UseItem(string type)
@@ -32,6 +44,14 @@ public class Inventory : MonoBehaviour
         if (items[type] > 0)
         {
             items[type] -= 1;
+            if (type == "Candy")
+            {
+                candyCount.text = items[type].ToString();
+            }
+            if (type == "Rope")
+            {
+                ropeCount.text = items[type].ToString();
+            }
             return true;
         }
         return false;

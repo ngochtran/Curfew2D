@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5705538111908428292}
   - component: {fileID: 407022695831885970}
+  - component: {fileID: 9085063595385061671}
+  - component: {fileID: -5017429882507853208}
   m_Layer: 0
   m_Name: shrubs_6
   m_TagString: Untagged
@@ -84,3 +86,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &9085063595385061671
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8701002665973010301}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.10053468}
+  serializedVersion: 2
+  m_Radius: 0.39946532
+--- !u!114 &-5017429882507853208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8701002665973010301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20db26263f5e55a47bb35412917c11ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
