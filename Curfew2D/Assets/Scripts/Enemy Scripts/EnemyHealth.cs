@@ -60,14 +60,16 @@ public class EnemyHealth : MonoBehaviour
 
     void DropItem()
     {
+        Vector2 pos = GetComponent<Transform>().position;
+        Quaternion rot = new Quaternion();
         int choice = Random.Range(0, 10);
         if (choice <= ropeChoice)
         {
-            Instantiate(rope);
+            Instantiate(rope, pos, rot);
         }
         else if (choice <= candyChoice)
         {
-            Instantiate(candy);
+            Instantiate(candy, pos, rot);
         }
     }
 }

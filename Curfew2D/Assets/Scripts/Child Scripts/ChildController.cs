@@ -21,12 +21,15 @@ public class ChildController : MonoBehaviour
     [SerializeField]
     // Yep we're defining that here, deal with it
     private int trapDamage = 1;
+    [SerializeField]
+    private float winDistance = 3.0f;
 
     private float curTrapImmunity = 0.0f;
 
     private ChildStateController stateSwitcher;
     private ChildHealth childHealth;
     private GameObject fairyLeader;
+    private Vector2 houseLocation;
 
     // Animation Variables
     public Animator animator;
@@ -41,10 +44,18 @@ public class ChildController : MonoBehaviour
         stateSwitcher = GetComponent<ChildStateController>();
         childHealth = GetComponent<ChildHealth>();
         fairyLeader = GameObject.Find("Player");
+        houseLocation = GameObject.Find("House").GetComponent<Transform>().position;
     }
     // Update is called once per frame
     void Update()
     {
+        // If we ever come close to the house then yay, we win!
+        if (Vector2.Distance(transform.position, houseLocation) < winDistance)
+        {
+            Win();
+        }
+
+
         ChildStateController.State currentState = stateSwitcher.currentState;
         if (currentState == ChildStateController.State.Follow)
         {
@@ -126,5 +137,10 @@ public class ChildController : MonoBehaviour
     public void SetLeader(GameObject leader)
     {
         fairyLeader = leader;
+    }
+
+    void Win()
+    {
+        Debug.Log("You win");
     }
 }

@@ -32,6 +32,7 @@ public class ProjectileController : MonoBehaviour
         {
             EnemyHealth enemyHealth = collision.GetComponent<EnemyHealth>();
             enemyHealth.TakeDamage(damage);
+            Destroy(gameObject);
         }
     }
 }
