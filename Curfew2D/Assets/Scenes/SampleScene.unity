@@ -251,6 +251,31 @@ MonoBehaviour:
   - {fileID: 6879270080047588822, guid: acacf69bda8527f4587706499c469274, type: 3}
   - {fileID: 6733346030966125361, guid: f31ae618897b6dd44b291c1173609615, type: 3}
   - {fileID: 1803558500162489056, guid: 7648fab7905667042845ced066aff712, type: 3}
+--- !u!1 &225380624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3256065074072440578, guid: 727a5cfb9a996874ea1ef132e30eadf2, type: 3}
+  m_PrefabInstance: {fileID: 3256065073760085031}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &225380631
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225380624}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2256b9cbe4d942f41860e8e7776ac71a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &232790986
 GameObject:
   m_ObjectHideFlags: 0
@@ -2098,6 +2123,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 957222257, guid: 727a5cfb9a996874ea1ef132e30eadf2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3256065074072440576, guid: 727a5cfb9a996874ea1ef132e30eadf2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -762430847, guid: 837e2cad85f1c7c49a15715de333c958, type: 3}
+    - target: {fileID: 3256065074072440577, guid: 727a5cfb9a996874ea1ef132e30eadf2, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 225380631}
     - target: {fileID: 3256065074072440578, guid: 727a5cfb9a996874ea1ef132e30eadf2, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2105,6 +2142,14 @@ PrefabInstance:
     - target: {fileID: 3256065074072440591, guid: 727a5cfb9a996874ea1ef132e30eadf2, type: 3}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3256065074072440591, guid: 727a5cfb9a996874ea1ef132e30eadf2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3256065074072440591, guid: 727a5cfb9a996874ea1ef132e30eadf2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3256065074072440591, guid: 727a5cfb9a996874ea1ef132e30eadf2, type: 3}
       propertyPath: m_LocalPosition.x

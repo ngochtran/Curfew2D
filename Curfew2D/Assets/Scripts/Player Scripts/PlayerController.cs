@@ -17,6 +17,10 @@ public class PlayerController : MonoBehaviour
     Vector2 movement;
 
     public GameObject projectile;
+
+    // Animation Variables 
+    public Animator animator; 
+
     void Start()
     {
         inventory = GetComponent<Inventory>();
@@ -33,6 +37,8 @@ public class PlayerController : MonoBehaviour
         transform.Translate(Vector2.right * speed * horizontalInput * Time.deltaTime);
         transform.Translate(Vector2.up * speed * verticalInput * Time.deltaTime);
 
+        animator.SetFloat("Horizontal", horizontalInput);
+        animator.SetFloat("Vertical", verticalInput);
 
         // Spawn a projectile if we press the space bar and our cooldown is done
         if (Input.GetKeyDown(KeyCode.Space) && currentCooldown <= 0)
