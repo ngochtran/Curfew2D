@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2932588555683841071}
   - component: {fileID: 2932588555683841068}
   - component: {fileID: 1211656765}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Candy
   m_TagString: Item
   m_Icon: {fileID: 0}
