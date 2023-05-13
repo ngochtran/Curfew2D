@@ -3,7 +3,9 @@ guid: c2b558d2f697241e39fdb4ad2e6c8c4d
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - rope: {fileID: 3673492475319075414, guid: 1b0e7e315c1fb4493b7ccb84c120192b, type: 3}
+  - candy: {fileID: 2932588555683841069, guid: 3fc85318955ad4a238aae270e9a2145c, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
