@@ -87,6 +87,7 @@ public class ChildController : MonoBehaviour
         // And if we're too far away then we become idle
         if (Vector2.Distance(fairyLeader.GetComponent<Transform>().position, transform.position) >= followDistance)
         {
+            moving = 0;
             stateSwitcher.currentState = ChildStateController.State.Idle;
         }
 
@@ -118,6 +119,7 @@ public class ChildController : MonoBehaviour
         if (Vector2.Distance(fairyLeader.GetComponent<Transform>().position, transform.position) < followDistance)
         {
             stateSwitcher.currentState = ChildStateController.State.Follow;
+
         }
     }
 
