@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3946394683813328179}
   - component: {fileID: 1820199560}
   - component: {fileID: -1431416848903487719}
+  - component: {fileID: 1264759832909534844}
   m_Layer: 0
   m_Name: EvilFairy
   m_TagString: Enemy
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 511870955, guid: bc980cd0814caff41a28ba802b63051c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -104,7 +105,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   maxIdleTime: 4
+  minIdleTime: 1
   maxWalkingTime: 1
+  minWalkingTime: 0.5
+  idleCycles: 0
 --- !u!114 &3946394683813328180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,7 +140,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.71875, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -172,6 +176,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2b558d2f697241e39fdb4ad2e6c8c4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ropeChoice: 2
+  candyChoice: 7
+  rope: {fileID: 0}
+  candy: {fileID: 0}
   health: 10
 --- !u!50 &-1431416848903487719
 Rigidbody2D:
@@ -194,3 +202,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &1264759832909534844
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3946394683813328181}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bee2a0a9f220bbe40bca8b29bf15d0e0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

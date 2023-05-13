@@ -10,21 +10,25 @@ public class ChildHealth : MonoBehaviour
 
     private int health;
 
+    public HealthBar healthBar;
+
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void TakeDamage(int damage)
     {
         health -= damage;
+        healthBar.SetHealth(health);
         if (health < 1)
         {
             Die();

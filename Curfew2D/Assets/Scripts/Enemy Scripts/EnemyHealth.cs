@@ -14,15 +14,19 @@ public class EnemyHealth : MonoBehaviour
     private GameObject rope;
     [SerializeField]
     private GameObject candy;
+    [SerializeField]
+    private int maxHealth = 100;
+    private int health;
+
+
+    public HealthBar healthBar;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        health = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
-
-    [SerializeField]
-    private int health = 10;
 
     // Update is called once per frame
     void Update()
@@ -33,6 +37,7 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+        healthBar.SetHealth(health);
         if (health < 1)
         {
             Die();
