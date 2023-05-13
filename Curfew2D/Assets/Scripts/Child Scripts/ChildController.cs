@@ -7,10 +7,16 @@ using UnityEngine.UIElements;
 public class ChildController : MonoBehaviour
 {
     // Child Variables
-    public float childSpeed = 5.0f;
-    public float stopDistance = 1.0f;
-    public int health = 15;
+    [SerializeField]
+    private float childSpeed = 5.0f;
+    [SerializeField]
+    private float stopDistance = 1.0f;
+    [SerializeField]
+    private float followDistance = 5.0f;
+    [SerializeField]
+    private int health = 15;
     public Rigidbody2D rb;
+    [SerializeField]
     private float trapImmunity = 0.5f;
     [SerializeField]
     // Yep we're defining that here, deal with it
@@ -52,6 +58,10 @@ public class ChildController : MonoBehaviour
         {
             MoveChild();
         }
+        else if (currentState == ChildStateController.State.Idle)
+        {
+            Idle();
+        }
     }
 
     void MoveChild()
@@ -74,6 +84,12 @@ public class ChildController : MonoBehaviour
             moving = 0;
         }
 
+        // And if we're too far away then we become idle
+        if (Vector2.Distance(fairyLeader.GetComponent<Transform>().position, transform.position) >= followDistance)
+        {
+            stateSwitcher.currentState = ChildStateController.State.Idle;
+        }
+
 
         // Animations
         animator.SetFloat("Horizontal", horizontalInput);
@@ -94,6 +110,14 @@ public class ChildController : MonoBehaviour
         {
             childHealth.TakeDamage(trapDamage);
             curTrapImmunity = trapImmunity;
+        }
+    }
+
+    void Idle()
+    {
+        if (Vector2.Distance(fairyLeader.GetComponent<Transform>().position, transform.position) < followDistance)
+        {
+            stateSwitcher.currentState = ChildStateController.State.Follow;
         }
     }
 

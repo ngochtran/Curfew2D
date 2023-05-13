@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChildStateController : MonoBehaviour
 {
-    public enum State {Follow, InTrap, FollowEvil};
+    public enum State {Follow, InTrap, FollowEvil, Idle};
     public State currentState;
 
     // Start is called before the first frame update
