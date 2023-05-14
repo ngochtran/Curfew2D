@@ -8,7 +8,7 @@ public class ChildHealth : MonoBehaviour
     [SerializeField]
     private int maxHealth = 10;
 
-    private int health;
+    public int health;
 
     public HealthBar healthBar;
 

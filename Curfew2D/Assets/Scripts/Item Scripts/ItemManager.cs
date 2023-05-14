@@ -9,6 +9,8 @@ public class ItemManager : MonoBehaviour
     private float itemUseDistance = 2.0f;
     [SerializeField]
     private int healAmouont = 2;
+    [SerializeField]
+    private float freeDistance = 1.0f;
 
     private Inventory inventory;
     private Transform childTransform;
@@ -31,15 +33,24 @@ public class ItemManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       if (Input.GetMouseButtonDown(0))
+        {
+            Clicked();
+        }
+    }
+
+    void Clicked()
+    {
         GameObject child = GameObject.Find("Child");
         childTransform = child.GetComponent<Transform>();
-        childBounds = child.GetComponent<Collider2D>().bounds;
-        
+        childBounds = child.GetComponent<CapsuleCollider2D>().bounds;
+
         Vector2 mouseLocation = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 playerPos = player.GetComponent<Transform>().position;
         Vector2 childPos = childTransform.position;
 
-        if (childBounds.Contains(mouseLocation)) { 
+        if (childBounds.Contains(mouseLocation))
+        {
             if (Vector2.Distance(childPos, playerPos) < itemUseDistance)
             {
                 // Use a rope if the child is trapped, otherwise use a candy.
@@ -49,12 +60,17 @@ public class ItemManager : MonoBehaviour
                     // Try to use a rope. If we have a rope.
                     if (inventory.UseItem("Rope"))
                     {
-                        // TODO: Something about saving the child
+                        Vector2 direction = (playerPos - childPos).normalized;
+                        child.transform.Translate(direction * freeDistance);
+                        // And also save the child by changing the state
+                        child.GetComponent<ChildStateController>().currentState = ChildStateController.State.Follow;
                     }
-                } else
+                }
+                else
                 {
                     if (inventory.UseItem("Candy"))
                     {
+                        Debug.Log(childHealth.health);
                         childHealth.Heal(healAmouont);
                     }
                 }
