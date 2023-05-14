@@ -44,7 +44,7 @@ public class ChildController : MonoBehaviour
         stateSwitcher = GetComponent<ChildStateController>();
         childHealth = GetComponent<ChildHealth>();
         fairyLeader = GameObject.Find("Player");
-        houseLocation = GameObject.Find("House").GetComponent<Transform>().position;
+        houseLocation = GameObject.Find("House(Clone)").GetComponent<Transform>().position;
     }
     // Update is called once per frame
     void Update()
