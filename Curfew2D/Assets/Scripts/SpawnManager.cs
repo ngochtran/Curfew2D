@@ -29,13 +29,23 @@ public class SpawnManager : MonoBehaviour
     {
         ResetChildTime();
         ResetPlayerTime();
+        ResetEnemy();
     }
 
     // Update is called once per frame
     void Update()
     {
-        SpawnChild();
-        SpawnPlayer();
+        childWaitTime -= Time.deltaTime;
+        playerWaitTime -= Time.deltaTime;
+
+        if (childWaitTime < 0)
+        {
+            SpawnChild();
+        }
+        if (playerWaitTime < 0)
+        {
+            SpawnPlayer();
+        }
     }
 
     void SpawnChild()
@@ -44,7 +54,10 @@ public class SpawnManager : MonoBehaviour
         float x = Random.Range(minChildRadius, maxChildRadius);
         float y = Random.Range(minChildRadius, maxChildRadius);
 
-        Vector2 pos = new Vector2(x, y);
+        int xSign = GetSign();
+        int ySign = GetSign();
+
+        Vector2 pos = new Vector2(x * xSign, y * ySign);
         Quaternion rot = new Quaternion();
 
         // Don't spawn if the location is in the camera bounds
@@ -69,7 +82,10 @@ public class SpawnManager : MonoBehaviour
         float xCoord = Random.Range(minPlayerRadius, maxPLayerRadius);
         float yCoord = Random.Range(minPlayerRadius, maxPLayerRadius);
 
-        Vector2 pos = new Vector2(xCoord, yCoord);
+        int xSign = GetSign();
+        int ySign = GetSign();
+
+        Vector2 pos = new Vector2(xCoord * xSign, yCoord * ySign);
         Quaternion rot = new Quaternion();
 
         Instantiate(enemy, pos, rot);
@@ -79,16 +95,31 @@ public class SpawnManager : MonoBehaviour
     void ResetChildTime()
     {
         childWaitTime = Random.Range(minWaitTime, maxWaitTime);
+        ResetEnemy();
     }
 
     void ResetPlayerTime()
     {
         playerWaitTime = Random.Range(minWaitTime, maxWaitTime);
+        ResetEnemy();
     }
 
     void ResetEnemy()
     {
         int i = Random.Range(0, enemies.Length);
         enemy = enemies[i];
+    }
+
+    int GetSign()
+    {
+        int i = Random.Range(0, 2);
+        if (i == 0)
+        {
+            return -1;
+        }
+        else
+        {
+            return 1;
+        }
     }
 }
