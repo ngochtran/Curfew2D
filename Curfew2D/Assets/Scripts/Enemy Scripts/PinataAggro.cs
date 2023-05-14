@@ -24,6 +24,10 @@ public class PinataAggro : MonoBehaviour
     private float curDashDuration = 0.0f;
     private Vector2 direction;
 
+    // Animation Variables 
+    public Animator animator;
+    private float status;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,13 +40,13 @@ public class PinataAggro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         // Get the current state
         EnemyStateSwitcher.State enemyState = stateSwitcher.currentState;
         // and move the llama towards the player if we're in aggro mode
         if (enemyState == EnemyStateSwitcher.State.Aggro)
         {
-
+            status = 0;
+            animator.SetFloat("Status", status);
             // Switch to DashWarmup state if we're within range
             Vector2 childPos = GameObject.Find("Child").GetComponent<Transform>().position;
             Vector2 curPos = new Vector2(transform.position.x, transform.position.y);
@@ -75,6 +79,8 @@ public class PinataAggro : MonoBehaviour
     // Decreases the current time and switches to our next mode when we're done.
     void DashWarmup()
     {
+        status = 1;
+        animator.SetFloat("Status", status);
         curDashDelay -= Time.deltaTime;
         if (curDashDelay <= 0)
         {
@@ -93,6 +99,8 @@ public class PinataAggro : MonoBehaviour
     // Move the llama forward to the target location at our given speed
     void Dash()
     {
+        status = 2;
+        animator.SetFloat("Status", status);
         // Decrease our time
         curDashDuration -= Time.deltaTime;
         // Go back to aggro if we've used up all of our time

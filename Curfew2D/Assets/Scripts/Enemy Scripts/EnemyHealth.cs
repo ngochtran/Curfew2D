@@ -18,6 +18,9 @@ public class EnemyHealth : MonoBehaviour
     private int maxHealth = 100;
     private int health;
 
+    // Animation Variables
+    public Animator animator;
+    public float status;
 
     public HealthBar healthBar;
 
@@ -36,6 +39,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        status = 3;
         health -= damage;
         healthBar.SetHealth(health);
         if (health < 1)
@@ -46,6 +50,8 @@ public class EnemyHealth : MonoBehaviour
 
     void Die()
     {
+        status = 4;
+        animator.SetFloat("Status", status);
         Destroy(gameObject);
         // If we're luring the child then we need to set a new leader before expiring
         EnemyStateSwitcher.State currentState = GetComponent<EnemyStateSwitcher>().currentState;
