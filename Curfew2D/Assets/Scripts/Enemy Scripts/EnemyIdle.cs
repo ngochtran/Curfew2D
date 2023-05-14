@@ -16,7 +16,7 @@ public class EnemyIdle : MonoBehaviour
     private float minWalkingTime = 0.5f;
 
     private float idleTime = 0.0f;
-    private float walkingTime = 0.0f;
+    public float walkingTime = 0.0f;
     private Vector2 direction;
     public int idleCycles = 0;
 
