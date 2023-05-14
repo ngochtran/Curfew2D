@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class ChildController : MonoBehaviour
 {
@@ -141,6 +142,6 @@ public class ChildController : MonoBehaviour
 
     void Win()
     {
-        Debug.Log("You win");
+        SceneManager.LoadScene("WinScreen");
     }
 }

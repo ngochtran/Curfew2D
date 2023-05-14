@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ChildHealth : MonoBehaviour
 {
@@ -37,7 +38,7 @@ public class ChildHealth : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Child Died");
+        SceneManager.LoadScene("LoseScreen");
     }
 
     public void Heal(int amount)
