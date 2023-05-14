@@ -43,9 +43,11 @@ public class ChildHealth : MonoBehaviour
     public void Heal(int amount)
     {
         health += amount;
+        healthBar.SetHealth(health);
         if (health > maxHealth)
         {
             health = maxHealth;
+            healthBar.SetHealth(health);
         }
     }
 }
