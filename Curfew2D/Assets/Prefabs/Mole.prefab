@@ -109,6 +109,7 @@ MonoBehaviour:
   minIdleTime: 1
   maxWalkingTime: 1
   minWalkingTime: 0.5
+  walkingTime: 0
   idleCycles: 0
 --- !u!114 &8407528561041805425
 MonoBehaviour:
@@ -140,8 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ef405273a7249ffad1ba6ae81d13bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxIdleCycles: 7
-  minIdleCycles: 4
+  maxIdleCycles: 3
+  minIdleCycles: 2
   digTime: 2
   trap: {fileID: 1803327423018473077, guid: 9c14d8c9f9054493b8bb48e63f52bb66, type: 3}
 --- !u!114 &680236998296173621
