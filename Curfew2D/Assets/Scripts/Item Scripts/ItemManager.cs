@@ -33,9 +33,24 @@ public class ItemManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if (Input.GetMouseButtonDown(0))
+        GameObject child = GameObject.Find("Child");
+        childTransform = child.GetComponent<Transform>();
+        childBounds = child.GetComponent<CapsuleCollider2D>().bounds;
+
+        Vector2 mouseLocation = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 playerPos = player.GetComponent<Transform>().position;
+        Vector2 childPos = childTransform.position;
+
+        if (Vector2.Distance(childPos, playerPos) < itemUseDistance)
         {
-            Clicked();
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                UseCandy();
+            }
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                UseRope();
+            }
         }
     }
 
@@ -73,6 +88,37 @@ public class ItemManager : MonoBehaviour
                         childHealth.Heal(healAmouont);
                     }
                 }
+            }
+        }
+    }
+
+    void UseCandy()
+    {
+        if (inventory.UseItem("Candy"))
+        {
+            childHealth.Heal(healAmouont);
+        }
+    }
+
+    void UseRope()
+    {
+        GameObject child = GameObject.Find("Child");
+        childTransform = child.GetComponent<Transform>();
+        childBounds = child.GetComponent<CapsuleCollider2D>().bounds;
+
+        Vector2 mouseLocation = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 playerPos = player.GetComponent<Transform>().position;
+        Vector2 childPos = childTransform.position;
+        ChildStateController.State curState = child.GetComponent<ChildStateController>().currentState;
+        if (curState == ChildStateController.State.InTrap)
+        {
+            // Try to use a rope. If we have a rope.
+            if (inventory.UseItem("Rope"))
+            {
+                Vector2 direction = (playerPos - childPos).normalized;
+                child.transform.Translate(direction * freeDistance);
+                // And also save the child by changing the state
+                child.GetComponent<ChildStateController>().currentState = ChildStateController.State.Follow;
             }
         }
     }
