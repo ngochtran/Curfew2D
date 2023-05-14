@@ -8,7 +8,7 @@ public class ChildHealth : MonoBehaviour
     [SerializeField]
     private int maxHealth = 10;
 
-    public int health;
+    private int health;
 
     public HealthBar healthBar;
 
@@ -43,9 +43,11 @@ public class ChildHealth : MonoBehaviour
     public void Heal(int amount)
     {
         health += amount;
+        healthBar.SetHealth(health);
         if (health > maxHealth)
         {
             health = maxHealth;
+            healthBar.SetHealth(health);
         }
     }
 }

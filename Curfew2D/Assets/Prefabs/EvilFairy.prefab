@@ -181,7 +181,7 @@ MonoBehaviour:
   candyChoice: 7
   rope: {fileID: 0}
   candy: {fileID: 0}
-  maxHealth: 100
+  maxHealth: 10
   healthBar: {fileID: 5053125698301143942}
 --- !u!50 &-1431416848903487719
 Rigidbody2D:

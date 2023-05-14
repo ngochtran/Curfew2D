@@ -70,7 +70,6 @@ public class ItemManager : MonoBehaviour
                 {
                     if (inventory.UseItem("Candy"))
                     {
-                        Debug.Log(childHealth.health);
                         childHealth.Heal(healAmouont);
                     }
                 }

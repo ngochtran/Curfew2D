@@ -126,7 +126,7 @@ MonoBehaviour:
   candyChoice: 7
   rope: {fileID: 0}
   candy: {fileID: 0}
-  maxHealth: 100
+  maxHealth: 10
   healthBar: {fileID: 4632888724410458234}
 --- !u!114 &6368016569042255764
 MonoBehaviour:
