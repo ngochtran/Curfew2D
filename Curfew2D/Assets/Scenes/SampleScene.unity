@@ -633,12 +633,12 @@ MonoBehaviour:
   - {fileID: 3508152091055762638, guid: 07bb3c69d91f54e1f8e3e16a5c872f60, type: 3}
   - {fileID: 7593456168627304708, guid: 634772c2bc5ac944592be28879ba5e26, type: 3}
   - {fileID: 7593456168627304708, guid: 634772c2bc5ac944592be28879ba5e26, type: 3}
-  minChildRadius: 10
-  maxChildRadius: 15
-  minPlayerRadius: 10
-  maxPLayerRadius: 15
-  minWaitTime: 10
-  maxWaitTime: 20
+  minChildRadius: 9
+  maxChildRadius: 12
+  minPlayerRadius: 9
+  maxPLayerRadius: 12
+  minWaitTime: 3
+  maxWaitTime: 5
 --- !u!4 &435702980
 Transform:
   m_ObjectHideFlags: 0

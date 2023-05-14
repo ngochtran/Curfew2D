@@ -108,6 +108,7 @@ MonoBehaviour:
   minIdleTime: 1
   maxWalkingTime: 1
   minWalkingTime: 0.5
+  walkingTime: 0
   idleCycles: 0
 --- !u!114 &5474165036719143757
 MonoBehaviour:
@@ -122,7 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
-  aggroRange: 3
+  aggroRange: 5
 --- !u!61 &1361231628
 BoxCollider2D:
   m_ObjectHideFlags: 0
