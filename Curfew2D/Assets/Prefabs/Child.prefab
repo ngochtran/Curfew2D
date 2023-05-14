@@ -110,7 +110,7 @@ MonoBehaviour:
   health: 15
   rb: {fileID: 3402981196407163841}
   trapImmunity: 0.5
-  trapDamage: 1
+  trapDamage: 10
   winDistance: 3
   animator: {fileID: 3473013978657924095}
 --- !u!95 &3473013978657924095
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8509e06f42af14c0e9daea09e2a95999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 100
   healthBar: {fileID: 8700564601896729442}
 --- !u!114 &1626065613
 MonoBehaviour:

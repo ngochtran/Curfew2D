@@ -109,6 +109,7 @@ MonoBehaviour:
   minIdleTime: 1
   maxWalkingTime: 1
   minWalkingTime: 0.5
+  walkingTime: 0
   idleCycles: 0
 --- !u!114 &3946394683813328180
 MonoBehaviour:
@@ -182,6 +183,8 @@ MonoBehaviour:
   rope: {fileID: 0}
   candy: {fileID: 0}
   maxHealth: 10
+  animator: {fileID: 1264759832909534844}
+  status: 0
   healthBar: {fileID: 5053125698301143942}
 --- !u!50 &-1431416848903487719
 Rigidbody2D:

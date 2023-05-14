@@ -1829,7 +1829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemUseDistance: 2
-  healAmouont: 2
+  healAmouont: 25
   freeDistance: 1
 --- !u!4 &1136727609
 Transform:
@@ -3457,18 +3457,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 601999567186944188, guid: dad52ca227158aa438ef510adf99b2c1, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 601999567186944188, guid: dad52ca227158aa438ef510adf99b2c1, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 601999567186944188, guid: dad52ca227158aa438ef510adf99b2c1, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 601999567186944189, guid: dad52ca227158aa438ef510adf99b2c1, type: 3}
       propertyPath: m_Name
       value: Child
@@ -3555,18 +3543,6 @@ PrefabInstance:
       propertyPath: candyCount
       value: 
       objectReference: {fileID: 254243147}
-    - target: {fileID: 3256065074072440576, guid: 727a5cfb9a996874ea1ef132e30eadf2, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3256065074072440576, guid: 727a5cfb9a996874ea1ef132e30eadf2, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3256065074072440576, guid: 727a5cfb9a996874ea1ef132e30eadf2, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3256065074072440578, guid: 727a5cfb9a996874ea1ef132e30eadf2, type: 3}
       propertyPath: m_Name
       value: Player
