@@ -166,6 +166,7 @@ MonoBehaviour:
   spellDuration: 1
   speed: 5
   goPastTrapDistance: 2
+  animator: {fileID: 1264759832909534844}
 --- !u!114 &1820199560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,8 +184,8 @@ MonoBehaviour:
   rope: {fileID: 0}
   candy: {fileID: 0}
   maxHealth: 10
+  health: 0
   animator: {fileID: 1264759832909534844}
-  status: 0
   healthBar: {fileID: 5053125698301143942}
 --- !u!50 &-1431416848903487719
 Rigidbody2D:

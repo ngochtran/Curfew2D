@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -9,24 +10,24 @@ public class EnemyHealth : MonoBehaviour
     private int ropeChoice = 2;
     [SerializeField]
     private int candyChoice = 7;
-
+    private EnemyStateSwitcher stateSwitcher;
     [SerializeField]
     private GameObject rope;
     [SerializeField]
     private GameObject candy;
     [SerializeField]
     private int maxHealth = 100;
-    private int health;
+    public int health;
 
     // Animation Variables
     public Animator animator;
-    public float status;
 
     public HealthBar healthBar;
 
     // Start is called before the first frame update
     void Start()
     {
+        stateSwitcher = GetComponent<EnemyStateSwitcher>();
         health = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
@@ -39,7 +40,6 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        status = 3;
         health -= damage;
         healthBar.SetHealth(health);
         if (health < 1)
@@ -50,9 +50,6 @@ public class EnemyHealth : MonoBehaviour
 
     void Die()
     {
-        status = 4;
-        animator.SetFloat("Status", status);
-        Destroy(gameObject);
         // If we're luring the child then we need to set a new leader before expiring
         EnemyStateSwitcher.State currentState = GetComponent<EnemyStateSwitcher>().currentState;
         if (currentState == EnemyStateSwitcher.State.Luring)
@@ -61,6 +58,12 @@ public class EnemyHealth : MonoBehaviour
             GameObject player = GameObject.Find("Player");
             GameObject.Find("Child").GetComponent<ChildController>().SetLeader(player);
         }
+
+        stateSwitcher.currentState = EnemyStateSwitcher.State.Dead;
+        Destroy(gameObject, 1f);
+        animator.Play("Pinata_Death");
+        animator.Play("EvilFairy_Death");
+        animator.Play("Mole_Death");
 
         // But if we're a llama we got to maybe drop an item
         if (GetComponent<PinataAggro>() != null)

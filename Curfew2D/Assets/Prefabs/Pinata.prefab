@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 4506849886583471980}
   - component: {fileID: 5474165036719143757}
   - component: {fileID: 1361231628}
-  - component: {fileID: 1361231622}
   - component: {fileID: 1361231627}
+  - component: {fileID: 1361231622}
   - component: {fileID: 7593456167840761351}
   - component: {fileID: 6566272471534028337}
   m_Layer: 0
@@ -151,6 +151,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1361231627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7593456168627304708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b558d2f697241e39fdb4ad2e6c8c4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ropeChoice: 2
+  candyChoice: 7
+  rope: {fileID: 3673492475319075414, guid: 1b0e7e315c1fb4493b7ccb84c120192b, type: 3}
+  candy: {fileID: 2932588555683841069, guid: 3fc85318955ad4a238aae270e9a2145c, type: 3}
+  maxHealth: 10
+  health: 0
+  animator: {fileID: 6566272471534028337}
+  status: 0
+  healthBar: {fileID: 1838953150991821571}
 --- !u!114 &1361231622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,26 +191,6 @@ MonoBehaviour:
   dashDelay: 1
   damage: 25
   animator: {fileID: 6566272471534028337}
---- !u!114 &1361231627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7593456168627304708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2b558d2f697241e39fdb4ad2e6c8c4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ropeChoice: 2
-  candyChoice: 7
-  rope: {fileID: 3673492475319075414, guid: 1b0e7e315c1fb4493b7ccb84c120192b, type: 3}
-  candy: {fileID: 2932588555683841069, guid: 3fc85318955ad4a238aae270e9a2145c, type: 3}
-  maxHealth: 10
-  animator: {fileID: 6566272471534028337}
-  status: 0
-  healthBar: {fileID: 1838953150991821571}
 --- !u!50 &7593456167840761351
 Rigidbody2D:
   serializedVersion: 4

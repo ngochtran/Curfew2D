@@ -21,6 +21,11 @@ public class MoleController : MonoBehaviour
     private EnemyStateSwitcher stateSwitcher;
     private EnemyIdle enemyIdle;
 
+    // Animation Variables
+    public Animator animator;
+    private bool isDigging;
+    private bool isRunning;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,10 +51,19 @@ public class MoleController : MonoBehaviour
 
         // And do the usual state stuff
         EnemyStateSwitcher.State enemyState = stateSwitcher.currentState;
-        if (enemyState == EnemyStateSwitcher.State.Digging)
+        if (enemyState == EnemyStateSwitcher.State.Idle)
         {
+            isRunning = true;
+            isDigging = false;
+        }
+        else if (enemyState == EnemyStateSwitcher.State.Digging)
+        {
+            isRunning = false;
+            isDigging = true;
             Dig();
         }
+        animator.SetBool("isDigging", isDigging);
+        animator.SetBool("isRunning", isRunning);
     }
 
     void Dig()

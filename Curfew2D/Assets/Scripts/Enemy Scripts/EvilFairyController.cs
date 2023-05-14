@@ -19,6 +19,11 @@ public class EvilFairyController : MonoBehaviour
     private bool pastTrap = false;
     private float gonePastTrapDistance = 0.0f;
 
+    // Animation Variables 
+    public Animator animator;
+    private bool isCasting;
+    private bool isFlying;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,16 +37,24 @@ public class EvilFairyController : MonoBehaviour
         // Do the stupid workaround to set it to spell warmup
         if (enemyState == EnemyStateSwitcher.State.Aggro)
         {
+            isFlying = true;
+            isCasting = false;
             stateSwitcher.currentState = EnemyStateSwitcher.State.SpellWarmup;
         }
         else if (enemyState == EnemyStateSwitcher.State.SpellWarmup)
         {
+            isFlying = false;
+            isCasting = true;
             SpellWarmup();
         }
         else if (enemyState == EnemyStateSwitcher.State.Luring)
         {
+            isFlying = true;
+            isCasting = false;
             Lure();
         }
+        animator.SetBool("isCasting", isCasting);
+        animator.SetBool("isFlying", isFlying);
     }
 
     void SpellWarmup()

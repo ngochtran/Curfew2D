@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PinataAggro : MonoBehaviour
@@ -26,7 +27,9 @@ public class PinataAggro : MonoBehaviour
 
     // Animation Variables 
     public Animator animator;
-    private float status;
+    private bool isDashing;
+    private bool isWalking;
+    private bool isCharging;
 
     // Start is called before the first frame update
     void Start()
@@ -42,11 +45,15 @@ public class PinataAggro : MonoBehaviour
     {
         // Get the current state
         EnemyStateSwitcher.State enemyState = stateSwitcher.currentState;
-        // and move the llama towards the player if we're in aggro mode
-        if (enemyState == EnemyStateSwitcher.State.Aggro)
+        if (enemyState == EnemyStateSwitcher.State.Dead)
         {
-            status = 0;
-            animator.SetFloat("Status", status);
+        }
+        // and move the llama towards the player if we're in aggro mode
+        else if (enemyState == EnemyStateSwitcher.State.Aggro)
+        {
+            isDashing = false;
+            isCharging = false;
+            isWalking = true;
             // Switch to DashWarmup state if we're within range
             Vector2 childPos = GameObject.Find("Child").GetComponent<Transform>().position;
             Vector2 curPos = new Vector2(transform.position.x, transform.position.y);
@@ -74,13 +81,27 @@ public class PinataAggro : MonoBehaviour
         {
             Dash();
         }
+        /*else if (enemyState == EnemyStateSwitcher.State.Hurt)
+        {
+            isDashing = false;
+            isCharging = false;
+            isWalking = false;
+            animator.SetBool("isHurt", true);
+            stateSwitcher.currentState = EnemyStateSwitcher.State.Aggro;
+        } */
+        animator.SetBool("isWalking", isWalking);
+        animator.SetBool("isCharging", isCharging);
+        animator.SetBool("isDashing", isDashing);
     }
 
     // Decreases the current time and switches to our next mode when we're done.
     void DashWarmup()
     {
-        status = 1;
-        animator.SetFloat("Status", status);
+        isDashing = false;
+        isCharging = true;
+        isWalking = false;
+        animator.SetBool("isHurt", false);
+        animator.SetBool("isDead", false);
         curDashDelay -= Time.deltaTime;
         if (curDashDelay <= 0)
         {
@@ -99,8 +120,11 @@ public class PinataAggro : MonoBehaviour
     // Move the llama forward to the target location at our given speed
     void Dash()
     {
-        status = 2;
-        animator.SetFloat("Status", status);
+        isDashing = true;
+        isCharging = false;
+        isWalking = false;
+        animator.SetBool("isHurt", false);
+        animator.SetBool("isDead", false);
         // Decrease our time
         curDashDuration -= Time.deltaTime;
         // Go back to aggro if we've used up all of our time

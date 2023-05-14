@@ -32,7 +32,7 @@ public class BehindSomething : MonoBehaviour
         if (collision.gameObject.tag == "Child")
         {
             SpriteRenderer childSprite = GameObject.Find("Child").GetComponent<SpriteRenderer>();
-            childSprite.color = new Color(1, 1, 1, 1); ;
+            childSprite.color = new Color(1, 1, 1, 1); 
         }
     }
 }

@@ -7,13 +7,17 @@ public class SpawnManager : MonoBehaviour
     [SerializeField]
     private GameObject[] enemies = new GameObject[4];
     [SerializeField]
-    private float minChildRadius = 15.0f;
+    private float minChildRadius = 25.0f;
     [SerializeField]
-    private float maxChildRadius = 20.0f;
+    private float maxChildRadius = 30.0f;
     [SerializeField]
-    private float minPlayerRadius = 15.0f;
+    private float minPlayerRadius = 25.0f;
     [SerializeField]
-    private float maxPLayerRadius = 20.0f;
+    private float maxPLayerRadius = 30.0f;
+
+    public GameObject child;
+    public GameObject player;
+
     [SerializeField]
     private float minWaitTime = 10.0f;
     [SerializeField]
@@ -57,7 +61,7 @@ public class SpawnManager : MonoBehaviour
         int xSign = GetSign();
         int ySign = GetSign();
 
-        Vector2 pos = new Vector2(x * xSign, y * ySign);
+        Vector2 pos = new Vector2((child.transform.position.x + x) * xSign, (child.transform.position.y + y) * ySign);
         Quaternion rot = new Quaternion();
 
         // Don't spawn if the location is in the camera bounds
@@ -85,7 +89,7 @@ public class SpawnManager : MonoBehaviour
         int xSign = GetSign();
         int ySign = GetSign();
 
-        Vector2 pos = new Vector2(xCoord * xSign, yCoord * ySign);
+        Vector2 pos = new Vector2((player.transform.position.x + xCoord) * xSign, (player.transform.position.y + yCoord) * ySign);
         Quaternion rot = new Quaternion();
 
         Instantiate(enemy, pos, rot);

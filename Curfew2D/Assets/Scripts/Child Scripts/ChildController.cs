@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
@@ -45,18 +44,10 @@ public class ChildController : MonoBehaviour
         stateSwitcher = GetComponent<ChildStateController>();
         childHealth = GetComponent<ChildHealth>();
         fairyLeader = GameObject.Find("Player");
-        houseLocation = GameObject.Find("House(Clone)").GetComponent<Transform>().position;
     }
     // Update is called once per frame
     void Update()
     {
-        // If we ever come close to the house then yay, we win!
-        if (Vector2.Distance(transform.position, houseLocation) < winDistance)
-        {
-            Win();
-        }
-
-
         ChildStateController.State currentState = stateSwitcher.currentState;
         if (currentState == ChildStateController.State.Follow)
         {
@@ -75,7 +66,14 @@ public class ChildController : MonoBehaviour
             Idle();
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "House")
+        {
+            Win();
+        }
 
+    }
     void MoveChild()
     {
         // Move the child towards the leader unless they're within stop distance

@@ -8,6 +8,7 @@ TagManager:
   - Child
   - Trap
   - Item
+  - House
   layers:
   - Default
   - TransparentFX
