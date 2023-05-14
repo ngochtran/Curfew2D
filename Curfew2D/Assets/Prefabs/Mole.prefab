@@ -128,6 +128,8 @@ MonoBehaviour:
   rope: {fileID: 0}
   candy: {fileID: 0}
   maxHealth: 10
+  animator: {fileID: 3297033153812155896}
+  status: 0
   healthBar: {fileID: 4632888724410458234}
 --- !u!114 &6368016569042255764
 MonoBehaviour:

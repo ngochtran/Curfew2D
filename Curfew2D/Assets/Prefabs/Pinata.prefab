@@ -168,7 +168,8 @@ MonoBehaviour:
   dashDistanceTrigger: 3
   dashDistance: 4
   dashDelay: 1
-  damage: 10
+  damage: 25
+  animator: {fileID: 6566272471534028337}
 --- !u!114 &1361231627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +187,8 @@ MonoBehaviour:
   rope: {fileID: 3673492475319075414, guid: 1b0e7e315c1fb4493b7ccb84c120192b, type: 3}
   candy: {fileID: 2932588555683841069, guid: 3fc85318955ad4a238aae270e9a2145c, type: 3}
   maxHealth: 10
+  animator: {fileID: 6566272471534028337}
+  status: 0
   healthBar: {fileID: 1838953150991821571}
 --- !u!50 &7593456167840761351
 Rigidbody2D:

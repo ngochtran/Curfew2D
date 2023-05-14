@@ -25,7 +25,6 @@ public class TimeChanger : MonoBehaviour
     void Update()
     {
         var timeElapsed = Time.time - startingTime;
-        print(timeElapsed);
         if (timeElapsed >= 25 && timeElapsed < 50)
         {
             currentTime = 6;
