@@ -56,7 +56,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b3089753ea3c2a740ac8efbc0489c27c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -103,6 +103,7 @@ MonoBehaviour:
   speed: 10
   attackCooldown: 0.5
   projectile: {fileID: 4963517476950527027, guid: c81cbd78b920a4e189a62eb4059e844c, type: 3}
+  animator: {fileID: 0}
 --- !u!61 &957222257
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -162,3 +163,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aef0d2dbb23e44a6bf2c6b38bc3ec2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  candyCount: {fileID: 0}
+  ropeCount: {fileID: 0}
